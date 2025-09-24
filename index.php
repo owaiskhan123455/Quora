@@ -1,3 +1,6 @@
+<?php session_start() ?>
+<?php include('./common/db_connect.php') ?>
+<?php include('./server/error_handler.php') ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -13,6 +16,8 @@
 
     if(isset($_GET['login'])){
         include('./client/login.php');
+    } elseif(isset($_GET['signup'])){
+        include('./client/signup.php');
     }
 
     ?>
